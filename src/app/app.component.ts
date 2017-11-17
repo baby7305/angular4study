@@ -17,7 +17,7 @@ export class AppComponent implements OnInit{
     this.getHeroes();
   }
   getHeroes(): void {
-    this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+    this.heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
   }
   selectedHero: Hero;
   onSelect(hero: Hero): void {
