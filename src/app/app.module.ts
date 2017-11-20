@@ -32,6 +32,10 @@ import { RouterModule } from '@angular/router';
         path: 'dashboard',
         component: DashboardComponent
       },
+      {
+        path: 'heroes',
+        component: HeroesComponent
+      },
       
     ]),
   ],
