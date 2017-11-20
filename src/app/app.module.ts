@@ -36,6 +36,10 @@ import { RouterModule } from '@angular/router';
         path: 'heroes',
         component: HeroesComponent
       },
+      {
+        path: 'detail/:id',
+        component: HeroDetailComponent
+      },
       
     ]),
   ],
