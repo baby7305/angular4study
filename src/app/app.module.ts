@@ -8,7 +8,8 @@ import { HeroesComponent } from '../heroes/heroes.component';
 import { HeroService } from '../hero-detail/hero.service';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
-import { RouterModule } from '@angular/router';
+
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -22,26 +23,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'heroes',
-        component: HeroesComponent
-      },
-      {
-        path: 'detail/:id',
-        component: HeroDetailComponent
-      },
-      
-    ]),
+    AppRoutingModule,
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
